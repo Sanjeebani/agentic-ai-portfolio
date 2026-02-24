@@ -1,137 +1,49 @@
-🛍️ Domain-Restricted E-Commerce RAG Assistant
-📌 Project Overview
+👩‍💻 About This Repository
 
-This project implements a Retrieval-Augmented Generation (RAG) based conversational assistant for an E-Commerce support domain.
+This repository documents my hands-on projects, system designs, and applied learnings from the Professional Certificate Programme in Agentic AI and Applications offered by IITM Pravartak.
 
-The assistant answers questions strictly using uploaded business documents (return policies, warranties, product manuals) and refuses to respond when information is not available in the knowledge base.
+The focus of this portfolio is:
 
-The system demonstrates:
+Agentic AI system design
 
-Context-restricted generation
+Multi-agent orchestration
 
-Similarity-based retrieval gating
+Retrieval-Augmented Generation (RAG)
 
-Source citation
+Tool-using AI agents
 
-Conversational memory
+Memory-enabled conversational systems
 
-Confidence scoring
+Hallucination-safe AI architectures
 
-Clean modular architecture
+Production-grade modular AI development
 
-Streamlit-based UI
+This is not a collection of notebooks — it is a structured progression toward building reliable, goal-driven AI systems.
 
-🏗️ System Architecture
-High-Level Flow
+📈 Learning Evolution
 
-Documents → Chunking
+Through this programme, I am transitioning from:
 
-Chunked text → Embeddings
+Using AI tools → Designing AI systems
 
-Embeddings → FAISS Vector Store
+Key shifts in thinking:
 
-User Query → Similarity Search
+From prompt writing → to architecture design
 
-Retrieved Context → LLM (gpt-4o-mini)
+From chatbot usage → to controlled AI pipelines
 
-Response + Sources + Confidence
+From experimentation → to system reliability
 
-Architecture Components
-1️⃣ Ingestion Layer (ingest.py)
+From model output → to explainability and confidence scoring
 
-Loads domain documents
+📌 What This Portfolio Represents
 
-Splits into chunks using text splitter
+This repository reflects:
 
-Converts to embeddings (text-embedding-3-small)
+Applied understanding of Agentic AI
 
-Stores vectors in FAISS
+Practical system-building capability
 
-2️⃣ Retrieval + LLM Core (rag_core.py)
+Engineering discipline in LLM integration
 
-Responsible for:
-
-Similarity search
-
-Threshold filtering (hallucination prevention)
-
-Prompt control
-
-Conversational memory
-
-Response generation
-
-Confidence score calculation
-
-3️⃣ User Interface (app.py)
-
-Built using Streamlit:
-
-Chat-style interface
-
-Displays sources
-
-Shows confidence score
-
-Maintains session memory
-
-🛡️ Hallucination Prevention Strategy
-
-The system prevents hallucinations using:
-
-Strict prompt instructions
-
-Similarity threshold filtering
-
-Domain-restricted answering
-
-Explicit refusal message when context not found
-
-Temperature set to 0 for deterministic outputs
-
-If similarity score exceeds threshold, system responds:
-
-"I don’t have enough information in the provided documents."
-
-📊 Confidence Score Logic
-
-Confidence = 1 - similarity_score
-
-Lower similarity distance → Higher confidence.
-
-This improves transparency and explainability.
-
-Tech Stack
-
-LangChain
-
-OpenAI (GPT-4o-mini)
-
-FAISS
-
-Streamlit
-
-Python
-
-Here are publicly available documents (or official policy pages you can save as PDF) that you can use for your RAG project in the E-Commerce – Product manuals & return policies domain:
-
-📄 1. Best Buy Return & Exchange Policy (PDF)
-
-This is an official return & exchange policy from Best Buy — useful as a document for your vector store.
-
-🔗 Best Buy Return & Exchange Policy PDF
-https://partners.bestbuy.com/documents/20126/3029894/Return%2B%26%2BExchange%2BPolicy.pdf/ee165181-38ed-21af-be39-30c2c7b34597?t=1629819812060
-
-📄 2. Samsung Returns and Faulty Goods Policy (PDF)
-
-Official Samsung policy for returns and faulty goods — you can download this PDF for ingestion.
-
-🔗 Samsung Returns and Faulty Goods Policy PDF
-https://images.samsung.com/is/content/samsung/assets/uk/returns-policy/Returns_and_faulty_goods_statement_FINAL_160522.pdf
-
-📄 3. Apple Returns & Refunds Policy (Web Page)
-
-Apple’s official returns/refunds support page — good for saving as PDF.
-
-🔗 Apple Returns & Refunds Policy (Apple Support)
-https://www.apple.com/shop/help/returns_refund
+Ability to move from theory to working systems
